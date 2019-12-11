@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.spdb.adsub"
+    },
+    "jhipsterVersion": "6.5.1",
+    "applicationType": "monolith",
+    "baseName": "adssub",
+    "packageName": "com.spdb.adsub",
+    "packageFolder": "com/spdb/adsub",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "NTRhM2MwZWE5M2U4NzA5ODliODQzOWRiNzBlM2U1ZmJhNWIxODEzOTg4ZDI1ODY3YTI0MWY0N2NhNjAyMzA5ZGUxYzNlNDFjYzcyNDE5OTMyZDE4MzlmNmYyYzM3OGE4MzUyZGE1OTQ4MmIxMzA1MWNlZTlkZjU0ZTY2OTVjY2Y=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "testFrameworks": ["cucumber"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
