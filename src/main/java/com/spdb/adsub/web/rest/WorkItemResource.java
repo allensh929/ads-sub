@@ -30,7 +30,7 @@ public class WorkItemResource {
     //https://docs.microsoft.com/en-us/rest/api/azure/devops/git/refs/list?view=azure-devops-rest-5.1
     private String api_refs_list = "https://dev.azure.com/{0}/{1}/_apis/git/repositories/{2}/refs?filter=heads/&filterContains={3}&api-version=5.1";
     private String api_create_ref = "https://dev.azure.com/{0}/{1}/_apis/git/repositories/{2}/refs?api-version=5.1";
-    // repository_id 目前hardcode
+    // your repository_id todo change your ***
     private String repository_id = "5efe6fcf-ce6e-4a88-b69f-3bef1c379303";
 
     @Autowired
@@ -77,7 +77,8 @@ public class WorkItemResource {
 
     private ResponseEntity<Refs> getRefs(HttpHeaders headers) {
         HttpEntity<Map<String, Object>> requestEntity = new HttpEntity<>(null, headers);
-        String getRefsUrl = MessageFormat.format(api_refs_list, "tlab", "TLOV5_UI", "TLOV5_UI", "master");
+        //todo change your ***
+        String getRefsUrl = MessageFormat.format(api_refs_list, "your organization", "your project", "your repository", "master");
         return restTemplate.exchange(getRefsUrl, HttpMethod.GET, requestEntity, Refs.class);
     }
 
@@ -88,8 +89,8 @@ public class WorkItemResource {
         crq.name = "refs/heads/feature_test" + new Random().nextInt();
         crq.newObjectId = newObjectId;
         createRefReqs.add(crq);
-
-        String createRefUrl = MessageFormat.format(api_create_ref, "tlab", "TLOV5_UI", repository_id);
+        //todo change your ***
+        String createRefUrl = MessageFormat.format(api_create_ref, "your organization", "your project", repository_id);
         HttpEntity<List<CreateRefReq>> createRefRequestEntity = new HttpEntity<>(createRefReqs, headers);
         return restTemplate.exchange(createRefUrl, HttpMethod.POST, createRefRequestEntity, CreateRefResponse.class);
     }

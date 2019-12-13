@@ -1,6 +1,62 @@
-# adssub
+# ADS sub
+
+#### **Azure Devops webhook integration demo for automatically create feature branch when a feature work item created.**
 
 This application was generated using JHipster 6.5.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.5.1](https://www.jhipster.tech/documentation-archive/v6.5.1).
+
+## Integrate with service hooks
+
+Over view:
+
+<img src="https://docs.microsoft.com/en-us/azure/devops/service-hooks/_img/service-hooks.png?view=azure-devops">
+
+Step 1:
+
+git clone the https://github.com/allensh929/spdb-test.git
+update the repositoryId, api_refs_list, api_create_ref according to your own azure organization, project, repositoryId
+
+Step 2:
+
+Follow the blow guid to create subscription of service hooks
+https://docs.microsoft.com/en-us/azure/devops/service-hooks/services/webhooks?view=azure-devops
+
+**Note:**
+
+1. create subscription: work item created, chose type=feature ;
+2. user:password=admin:admin
+3. both Azure devops server and integration service are not allowed localhost
+
+Step 3:
+
+Follow the blow **development** section to run the service
+
+1.  run in local
+
+         mvn clean install -DskipTests=true
+         java -jar **.jar
+         or directly run application from IDEA
+
+2.  Deploy the service to server
+3.  Try to add a feature work item trigger the action. enjoy.
+
+Refer to：
+
+1. https://docs.microsoft.com/en-us/azure/devops/service-hooks/overview?view=azure-devops
+2. https://docs.microsoft.com/en-us/azure/devops/service-hooks/services/webhooks?view=azure-devops
+
+## Azure devops rest api v5.1
+
+**List the repositories - get repository Id**
+
+https://docs.microsoft.com/en-us/rest/api/azure/devops/git/repositories/list?view=azure-devops-rest-5.1
+
+**List the refs - find objectId of master branch**
+
+https://docs.microsoft.com/en-us/rest/api/azure/devops/git/refs/list?view=azure-devops-rest-5.1
+
+**Create or update the ref(branch) base on master objectId**
+
+https://docs.microsoft.com/en-us/rest/api/azure/devops/git/refs/update%20refs?view=azure-devops-rest-5.1
 
 ## Development
 
