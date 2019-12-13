@@ -12,7 +12,7 @@ Over view:
 
 Step 1:
 
-git clone the https://github.com/allensh929/spdb-test.git
+git clone the https://github.com/allensh929/ads-sub.git
 
 search todo list
 
