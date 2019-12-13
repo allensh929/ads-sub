@@ -13,7 +13,10 @@ Over view:
 Step 1:
 
 git clone the https://github.com/allensh929/spdb-test.git
-update the repositoryId, api_refs_list, api_create_ref according to your own azure organization, project, repositoryId
+
+search todo list
+
+update the repositoryId, api_refs_list, api_create_ref, PAT according to your own azure organization, project, repositoryId
 
 Step 2:
 
@@ -22,9 +25,14 @@ https://docs.microsoft.com/en-us/azure/devops/service-hooks/services/webhooks?vi
 
 **Note:**
 
-1. create subscription: work item created, chose type=feature ;
-2. user:password=admin:admin
-3. both Azure devops server and integration service are not allowed localhost
+1.  create subscription: work item created, chose type=feature ;
+2.  user:password=admin:admin
+3.  both Azure devops server and integration service are not allowed localhost
+4.  create your own PAT (personal access token) from azure profile
+
+        token = Base64 encode {PAT}:{PAT}
+
+        add Authorization: Basic {token} in the header
 
 Step 3:
 
