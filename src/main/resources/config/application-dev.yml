@@ -68,6 +68,10 @@ spring:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
     cache: false
+  kafka:
+    admin:
+      ssl:
+        key-password:
 
 server:
   port: 8080
@@ -115,6 +119,8 @@ jhipster:
   audit-events:
     retention-period: 30 # Number of days before audit events are deleted.
 
+ads:
+  pat: cmp3YXp2Nnp0ZHhsbTN1dDdhbHdjemt5Y3h6Ynd1NXphdzM1cHFiZGxvN3hqbWVweWo1cTpyandhenY2enRkeGxtM3V0N2Fsd2N6a3ljeHpid3U1emF3MzVwcWJkbG83eGptZXB5ajVx
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
